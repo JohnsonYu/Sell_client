@@ -21,7 +21,7 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
+      { title: 'Menus', component: HomePage },
       { title: 'List', component: ListPage }
     ];
 
@@ -33,6 +33,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      // screen.orientation.lock('portrait-primary');
     });
   }
 
