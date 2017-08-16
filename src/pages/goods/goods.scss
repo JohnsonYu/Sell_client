@@ -1,3 +1,56 @@
-page-list {
+page-goods {
+  .cart {
+    content: url("../../assets/icon/shoppingCart-0.png");
+  }
+  .goods-base {
+    height: 180px;
+    width: 100%;
+  }
 
+  .part-a {
+    width: 50%;
+    height: 100%;
+    background-color: green;
+    float: left;
+    background: #312520;
+    opacity: 0.9;
+
+    .content {
+      margin-top: 15px;
+      p {
+        margin: 10px 5px 0 10px;
+        color: #F0FCFF;
+        font-size: 1.2rem;
+      }
+      span {
+        color: #F2ECDE;
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-left: 10px;
+      }
+      .line_01 {
+        padding: 0 20px 0;
+        margin: 20px 0;
+        line-height: 1px;
+        width: 100%;
+        border-left: 200px solid #ddd;
+        border-right: 200px solid #ddd;
+        text-align: center;
+        opacity: 0.7;
+      }
+      .heart {
+        color: #E0F0E9;
+      }
+    }
+  }
+  .part-b {
+    width: 50%;
+    height: 100%;
+    // background-repeat: no-repeat;
+    // background-color: black;
+    float: left;
+    .content {
+      display: none;
+    }
+  }
 }

@@ -6,23 +6,31 @@
     <ion-title>{{tapItem}}</ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="openCart()">
-        <i class="icon export-inactive"></i>
+        <i class="icon cart"></i>
       </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-left></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-right>
-        {{item.note}}
+  <ion-list no-line>
+    <div *ngFor="let item of items" (click)="itemTapped($event, item)">
+      <div class="goods-base">
+        <div class="{{item.style == 0? 'part-a' : 'part-b'}}" [style.background-image]="getBackground(item.img, item.style, 'first')">
+          <div class="content">
+            <span>{{item.title}}</span>
+            <p>{{item.describe}}</p>
+            <!-- <ion-icon class="heart" ios="ios-cart" md="md-cart"></ion-icon> -->
+          </div>
+        </div>
+        <div class="{{item.style == 1? 'part-a' : 'part-b'}}" [style.background-image]="getBackground(item.img, item.style, 'second')">
+          <div class="content">
+            <span>{{item.title}}</span>
+            <p>{{item.describe}}</p>
+            <!-- <ion-icon class="heart" ios="ios-cart" md="md-cart"></ion-icon> -->
+          </div>
+        </div>
       </div>
-    </button>
+    </div>
   </ion-list>
-  <!-- <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div> -->
 </ion-content>
