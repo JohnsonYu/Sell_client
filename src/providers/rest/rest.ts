@@ -12,10 +12,10 @@ import 'rxjs/add/operator/catch';
 */
 @Injectable()
 export class RestProvider {
-  private coffeeUrl = "../data/coffee.json";
-  private succulentUrl = "../data/succulent.json"
-  private teaUrl = "../data/tea.json"
-  private yogurtUrl = "../data/yogurt.json"
+  private coffeeUrl = "../assets/data/coffee.json";
+  private succulentUrl = "../assets/data/succulent.json";
+  private teaUrl = "../assets/data/tea.json";
+  private yogurtUrl = "../assets/data/yogurt.json";
 
   constructor(public http: Http) {
   }

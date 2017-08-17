@@ -1,0 +1,76 @@
+{
+    "data": [
+        {
+            "style": "1", 
+            "title": "棉花糖奶茶", 
+            "type": "tea",
+            "price": 30,
+            "unit":"/杯",
+            "describe": "产自印度东北部的优质阿萨姆红茶与浓郁三花淡奶的甜蜜碰撞，再加上软糯的萌猫爪棉花糖，冬日里给你更多一层温柔的抚慰。", 
+            "img": "../../assets/tea/mianhuatang.jpg"
+        }, 
+        {
+            "style": "0", 
+            "title": "蜜桃红茶", 
+            "type": "tea",
+            "price": 30,
+            "unit":"/杯",
+            "describe": "无桃子不夏天，优选红心水蜜桃熬制的蜜桃水搭配上等锡兰红茶，炎炎夏日，粉粉蜜桃和冰红茶更般配哦，给你一抹甜蜜的清凉。", 
+            "img": "../../assets/tea/mitao.jpg"
+        }, 
+        {
+            "style": "1", 
+            "title": "丝袜奶茶", 
+            "type": "tea",
+            "price": 28,
+            "unit":"/杯",
+            "describe": "产自斯里兰卡的锡兰红茶经历过6至7次撞茶后，加入荷兰黑白淡奶，入口幼滑如丝，延绵细蜜。", 
+            "img": "../../assets/tea/siwa.jpg"
+        }, 
+        {
+            "style": "0", 
+            "title": "鸳鸯奶茶", 
+            "type": "tea",
+            "price": 30,
+            "unit":"/杯",
+            "describe": "经典港味，奶、茶、咖啡以黄金比例混合，兼具咖啡的香浓和奶茶的丝滑，冷热都别具风味。", 
+            "img": "../../assets/tea/yuanyan.jpg"
+        }, 
+        {
+            "style": "1", 
+            "title": "玫瑰普洱奶茶", 
+            "type": "tea",
+            "price": 32,
+            "unit":"/杯",
+            "describe": "上选云南玫瑰普洱，鲜奶小火烹煮，入口微带苦涩，回味尽是玫瑰的甘甜与牛奶的顺滑，唇齿留香。", 
+            "img": "../../assets/tea/meigui.jpg"
+        }, 
+        {
+            "style": "0", 
+            "title": "冻柠茶", 
+            "type": "tea",
+            "price": 28,
+            "unit":"/杯",
+            "describe": "香浓红茶基，榨入新鲜柠檬汁，用蜂蜜调节甜味，解渴又清爽。", 
+            "img": "../../assets/tea/dongningcha.jpg"
+        }, 
+        {
+            "style": "1", 
+            "title": "冻柠乐", 
+            "type": "tea",
+            "price": 24,
+            "unit":"/杯",
+            "describe": "冻柠乐", 
+            "img": "../../assets/tea/dongningle.jpg"
+        }, 
+        {
+            "style": "0", 
+            "title": "红茶玛奇朵", 
+            "type": "tea",
+            "price": 30,
+            "unit":"/杯",
+            "describe": "红茶玛奇朵", 
+            "img": "../../assets/tea/hongcha.jpg"
+        }
+    ]
+}

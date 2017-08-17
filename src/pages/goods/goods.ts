@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { DomSanitizer} from '@angular/platform-browser';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
-import { DetailPage } from '../detail/detail'
-import { RestProvider } from '../../providers/rest/rest'
+import { RestProvider } from '../../providers/rest/rest';
+import { ModalContentPage } from '../modal/modal';
 
 @Component({
   selector: 'page-goods',
@@ -22,6 +22,7 @@ export class GoodsPage {
     // 'american-football', 'boat', 'bluetooth', 'build','heart'];
 
     this.items = [];
+    
     switch (this.tapItem) {
       case "Succulent":
         this.rest.getSucclents().subscribe(results => this.items = results.data);
@@ -40,7 +41,7 @@ export class GoodsPage {
   }
 
   getBackground (image, style, line) {
-    var result: any;
+    let result: string = "";
     if (style == 1 && line == 'first' || style == 0 && line == 'second') {
       result = image
     }
@@ -49,8 +50,14 @@ export class GoodsPage {
 
   itemTapped(event, item) {
     // That's right, we're pushing to ourselves!
-    this.navCtrl.push(DetailPage, {
-      selectedItem: item
-    });
+    // this.navCtrl.push(DetailPage, {
+    //   selectedItem: item
+    // });
+    if (item.type == "coffee" || item.type == "tea") {
+      let modal = this.modalCtrl.create(ModalContentPage, {'item':item}, {
+        cssClass: 'custom-modal' // defined in src/app/app.scss
+      });
+      modal.present();
+    }
   }
 }

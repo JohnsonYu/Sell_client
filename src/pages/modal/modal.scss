@@ -1,0 +1,43 @@
+page-madal {
+  .window{
+    background:#FFFFFF;
+    border:2px solid; 
+    border-color: #FFFFFF;
+    border-radius:8px; 
+    .title {
+      font-size: 3rem;
+      float: left;
+      margin-top: 1vh;
+      margin-left: 2vw;
+    }
+    ion-list {
+      margin-top: 4vh;
+      margin-bottom: 2vh;
+    }
+    ion-icon {
+      font-size: 4rem;
+      position: absolute;
+      right: 3vw;
+    }
+    .price {
+      float: left;
+      margin-left: 4vw;
+      margin-top: 1vh;
+      span {
+        margin-left: 2px;
+        font-size: 3.5rem;
+        font-weight: bold;
+      }
+      .fa {
+        color: #161823;
+        font-size: 2.5rem;
+      }
+    }
+    .shopping-cart-add {
+      content: url("../../assets/icon/shoppingCart-Add.svg");
+      margin-left: 45vw;
+      margin-bottom: 2vh;
+      margin-top: 2vh;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "data": [
+        {
+            "style": "1", 
+            "title": "元气酸奶杯", 
+            "type": "yogurt",
+            "price": 32,
+            "unit":"/杯",
+            "describe": "香浓希腊酸奶包裹层层澳洲燕麦，搭配时令鲜果及优选坚果碎，营养美味，元气满满。", 
+            "img": "../../assets/yogurt/yuanqi.jpg"
+        }
+    ]
+}

@@ -7,7 +7,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { GoodsPage } from '../pages/goods/goods'
-import { DetailPage } from '../pages/detail/detail'
+import { ModalContentPage } from '../pages/modal/modal'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,7 +19,7 @@ import { RestProvider } from '../providers/rest/rest';
     HomePage,
     ListPage,
     GoodsPage,
-    DetailPage
+    ModalContentPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +32,7 @@ import { RestProvider } from '../providers/rest/rest';
     HomePage,
     ListPage,
     GoodsPage,
-    DetailPage
+    ModalContentPage
   ],
   providers: [
     StatusBar,

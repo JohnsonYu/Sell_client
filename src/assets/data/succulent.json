@@ -1,0 +1,60 @@
+{
+    "data": [
+        {
+            "style": "0", 
+            "title": "宝石花", 
+            "type": "succulent",
+            "describe": "宝石花", 
+            "img": "../../assets/succulent/baoshihua.jpeg"
+        }, 
+        {
+            "style": "1", 
+            "title": "玻璃城", 
+            "type": "succulent",
+            "describe": "玻璃城", 
+            "img": "../../assets/succulent/bolicheng.jpeg"
+        }, 
+        {
+            "style": "0", 
+            "title": "观音莲", 
+            "type": "succulent",
+            "describe": "观音莲", 
+            "img": "../../assets/succulent/guanyinlian.jpeg"
+        }, 
+        {
+            "style": "1", 
+            "title": "黑法师", 
+            "type": "succulent",
+            "describe": "黑法师", 
+            "img": "../../assets/succulent/heifashi.jpeg"
+        }, 
+        {
+            "style": "0", 
+            "title": "环多多", 
+            "type": "succulent",
+            "describe": "环多多", 
+            "img": "../../assets/succulent/huanduoduo.jpeg"
+        }, 
+        {
+            "style": "1", 
+            "title": "静夜思", 
+            "type": "succulent",
+            "describe": "静夜思", 
+            "img": "../../assets/succulent/jingyesi.jpeg"
+        }, 
+        {
+            "style": "0", 
+            "title": "萌萌哒", 
+            "type": "succulent",
+            "describe": "萌萌哒", 
+            "img": "../../assets/succulent/mengmengda.jpeg"
+        }, 
+        {
+            "style": "1", 
+            "title": "诺玛", 
+            "type": "succulent",
+            "describe": "诺玛", 
+            "img": "../../assets/succulent/nuoma.jpeg"
+        }
+    ]
+}

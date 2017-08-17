@@ -1,0 +1,34 @@
+<div class="window">
+  <ion-icon ios="ios-close" md="md-close" (click)="dismiss()"></ion-icon>
+  <div class="title">{{ item.title }}</div>
+  <!-- <i class="fa fa-times fa-2x" aria-hidden="true" (click)="dismiss()"></i> -->
+  <ion-list>
+    <ion-item>
+      <ion-label>甜度</ion-label>
+      <ion-select [(ngModel)]="sweetness">
+        <ion-option value="more">多糖</ion-option>
+        <ion-option value="regular" selected>常规糖</ion-option>
+        <ion-option value="half">半糖</ion-option>
+        <ion-option value="less">微糖</ion-option>
+        <ion-option value="none">无糖</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>温度</ion-label>
+      <ion-select [(ngModel)]="temperature">
+        <ion-option value="more">多冰</ion-option>
+        <ion-option value="regular" selected>常规冰</ion-option>
+        <ion-option value="half">半冰</ion-option>
+        <ion-option value="less">微冰</ion-option>
+        <ion-option value="none">无冰</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <div class="bottom-line">
+    <div class="price">
+      <i class="fa fa-jpy" aria-hidden="true"></i>
+      <span>{{item.price}}</span>
+    </div>
+    <i class="shopping-cart-add" aria-hidden="true" (click)="save()"></i>
+  </div>
+</div>

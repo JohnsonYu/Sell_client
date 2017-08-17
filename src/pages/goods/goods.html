@@ -22,12 +22,20 @@
             <p>{{item.describe}}</p>
             <!-- <ion-icon class="heart" ios="ios-cart" md="md-cart"></ion-icon> -->
           </div>
+          <div class="price">
+            <i class="fa fa-jpy" aria-hidden="true"></i>
+            <span>{{item.price}} {{item.unit}}</span>
+          </div>
         </div>
         <div class="{{item.style == 1? 'part-a' : 'part-b'}}" [style.background-image]="getBackground(item.img, item.style, 'second')">
           <div class="content">
             <span>{{item.title}}</span>
             <p>{{item.describe}}</p>
             <!-- <ion-icon class="heart" ios="ios-cart" md="md-cart"></ion-icon> -->
+          </div>
+          <div class="price">
+            <i class="fa fa-jpy" aria-hidden="true"></i>
+            <span>{{item.price}} {{item.unit}}</span>
           </div>
         </div>
       </div>

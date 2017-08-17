@@ -1,0 +1,40 @@
+{
+    "data": [
+        {
+            "style": "1", 
+            "title": "滴漏咖啡",
+            "type": "coffee",
+            "price": 32,
+            "unit":"/杯",
+            "describe": "每一杯浓香的咖啡都出自那独特的越南滴漏壶，加入本土炼奶，口感浓情蜜意又沧桑粗犷，配上一杯冰块，就是让人魂牵梦绕的味道和感觉。", 
+            "img": "../../assets/coffee/didi.jpg"
+        }, 
+        {
+            "style": "0", 
+            "title": "美式咖啡", 
+            "type": "coffee",
+            "price": 24,
+            "unit":"/杯",
+            "describe": "美式咖啡", 
+            "img": "../../assets/coffee/meishi.jpg"
+        }, 
+        {
+            "style": "1", 
+            "title": "奶盖咖啡",
+            "type": "coffee", 
+            "price": 32,
+            "unit":"/杯",
+            "describe": "安佳淡奶油制作的冰奶盖，与热咖啡甜苦搭配，冷热冲突的清爽。", 
+            "img": "../../assets/coffee/naigai.jpg"
+        }, 
+        {
+            "style": "0", 
+            "title": "蛋清咖啡", 
+            "type": "coffee",
+            "price": 30,
+            "unit":"/杯",
+            "describe": "咖啡的苦中和了蛋腥味，蛋清也激发了咖啡的香气~大大的满足感。", 
+            "img": "../../assets/coffee/danqing.jpg"
+        }
+    ]
+}
