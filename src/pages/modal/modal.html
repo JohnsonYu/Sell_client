@@ -1,29 +1,44 @@
 <div class="window">
   <ion-icon ios="ios-close" md="md-close" (click)="dismiss()"></ion-icon>
   <div class="title">{{ item.title }}</div>
-  <!-- <i class="fa fa-times fa-2x" aria-hidden="true" (click)="dismiss()"></i> -->
-  <ion-list>
-    <ion-item>
-      <ion-label>甜度</ion-label>
-      <ion-select [(ngModel)]="sweetness">
-        <ion-option value="more">多糖</ion-option>
-        <ion-option value="regular" selected>常规糖</ion-option>
-        <ion-option value="half">半糖</ion-option>
-        <ion-option value="less">微糖</ion-option>
-        <ion-option value="none">无糖</ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label>温度</ion-label>
-      <ion-select [(ngModel)]="temperature">
-        <ion-option value="more">多冰</ion-option>
-        <ion-option value="regular" selected>常规冰</ion-option>
-        <ion-option value="half">半冰</ion-option>
-        <ion-option value="less">微冰</ion-option>
-        <ion-option value="none">无冰</ion-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
+  <ion-grid>
+    <p>温度</p>
+    <ion-row>
+      <ion-col>
+        <div text-center (click)="select($event,'temperature','more')">多冰</div>
+      </ion-col>
+      <ion-col>
+        <div text-center (click)="select($event,'temperature','less')">少冰</div>
+      </ion-col>
+      <ion-col>
+        <div text-center (click)="select($event,'temperature','none')">去冰</div>
+      </ion-col>
+      <ion-col>
+        <div text-center class="selected" (click)="select($event,'temperature','regular')">常温</div>
+      </ion-col>
+      <ion-col>
+        <div text-center (click)="select($event,'temperature','hot')">热</div>
+      </ion-col>
+    </ion-row>
+    <p>甜度</p>
+    <ion-row>
+      <ion-col>
+        <div text-center (click)="select($event,'sweetness','more')">多糖</div>
+      </ion-col>
+      <ion-col>
+        <div text-center class="selected" (click)="select($event,'sweetness','regular')">正常</div>
+      </ion-col>
+      <ion-col>
+        <div text-center (click)="select($event,'sweetness','half')">半塘</div>
+      </ion-col>
+      <ion-col>
+        <div text-center (click)="select($event,'sweetness','less')">微糖</div>
+      </ion-col>
+      <ion-col>
+        <div text-center (click)="select($event,'sweetness','none')">无糖</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
   <div class="bottom-line">
     <div class="price">
       <i class="fa fa-jpy" aria-hidden="true"></i>
