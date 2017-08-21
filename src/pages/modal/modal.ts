@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Platform, NavParams, ViewController } from 'ionic-angular';
+import { Platform, NavParams, ViewController, AlertController} from 'ionic-angular';
 
 @Component({
   templateUrl: 'modal.html',
@@ -14,7 +14,8 @@ export class ModalContentPage {
   constructor(
     public platform: Platform,
     public params: NavParams,
-    public viewCtrl: ViewController
+    public viewCtrl: ViewController,
+    public alertCtrl: AlertController
   ) {
     this.item = this.params.get('item');
   }
@@ -28,11 +29,11 @@ export class ModalContentPage {
     console.log(this.sweetness);
     this.viewCtrl.dismiss();
   }
-  select(item, type, mode) {
-    for( let col of item.path[2].children){
+  select($event, type, mode) {
+    for( let col of $event.path[2].children){
       col.children[0].classList.remove("selected");
     }
-    item.srcElement.classList.add("selected");
+    $event.srcElement.classList.add("selected");
     switch (type) {
       case "temperature":
         this.temperature = mode;
