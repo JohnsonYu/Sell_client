@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicApp, IonicErrorHandler, IonicModule, Config} from 'ionic-angular';
 import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
@@ -12,6 +12,8 @@ import { ModalContentPage } from '../pages/modal/modal'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { RestProvider } from '../providers/rest/rest';
+import { CartService } from './CartService';
+import { ModalLeaveTransition } from './modal-leave.transition'
 
 @NgModule({
   declarations: [
@@ -38,12 +40,14 @@ import { RestProvider } from '../providers/rest/rest';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RestProvider
+    RestProvider,
+    CartService
   ]
 })
 export class AppModule {
 
-  constructor() {
+  constructor(public config: Config) {
+    this.config.setTransition('modal-leave', ModalLeaveTransition);
     if (!("path" in Event.prototype)){
       Object.defineProperty(Event.prototype, "path", {
         get: function() {
@@ -62,5 +66,4 @@ export class AppModule {
       });
     }
   }
-  
 }

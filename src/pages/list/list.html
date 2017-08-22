@@ -3,21 +3,43 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>List</ion-title>
+    <ion-title>Orders</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+    <!-- <button ion-item *ngFor="let item of carts" (click)="itemTapped($event, item)">
       <ion-icon [name]="item.icon" item-left></ion-icon>
-      {{item.title}}
+      {{item.name}}
       <div class="item-note" item-right>
-        {{item.note}}
+        {{item.title}}
       </div>
-    </button>
+    </button> -->
+    <ion-item *ngFor="let item of carts; let i = index ">
+      <ion-thumbnail item-start>
+        <img src={{item.img}}>
+      </ion-thumbnail>
+      <h2>{{item.name}}</h2>
+      <div class='type'>
+        <p>温度：<span>{{ iceDict[item.temperature] }}</span></p>
+        <p>甜度：<span>{{ sweetDict[item.sweetness] }}</span></p>
+      </div>
+      <div class='price'>
+        <span>{{ item.price }}</span>
+      </div>
+      <button ion-button clear item-end (click)="delete($event, item, i)"><ion-icon ios="ios-close" md="md-close"></ion-icon></button>
+    </ion-item>
   </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
 </ion-content>
+
+<ion-footer>
+  <ion-navbar>
+    <ion-title>总价：{{summary.price}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="pay($event)">
+        <ion-icon ios="ios-card" md="md-card"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-footer>

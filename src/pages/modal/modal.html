@@ -1,41 +1,41 @@
-<div class="window">
+<div id="window" class="window">
   <ion-icon ios="ios-close" md="md-close" (click)="dismiss()"></ion-icon>
   <div class="title">{{ item.title }}</div>
   <ion-grid>
     <p>温度</p>
     <ion-row>
       <ion-col>
-        <div text-center (click)="select($event,'temperature','more')">多冰</div>
+        <div text-center (click)="select($event,'temperature','more')">{{ iceDict['more'] }}</div>
       </ion-col>
       <ion-col>
-        <div text-center (click)="select($event,'temperature','less')">少冰</div>
+        <div text-center (click)="select($event,'temperature','less')">{{ iceDict['less'] }}</div>
       </ion-col>
       <ion-col>
-        <div text-center (click)="select($event,'temperature','none')">去冰</div>
+        <div text-center (click)="select($event,'temperature','none')">{{ iceDict['none'] }}</div>
       </ion-col>
       <ion-col>
-        <div text-center class="selected" (click)="select($event,'temperature','regular')">常温</div>
+        <div text-center class="selected" (click)="select($event,'temperature','regular')">{{ iceDict['regular'] }}</div>
       </ion-col>
       <ion-col>
-        <div text-center (click)="select($event,'temperature','hot')">热</div>
+        <div text-center (click)="select($event,'temperature','hot')">{{ iceDict['hot'] }}</div>
       </ion-col>
     </ion-row>
     <p>甜度</p>
     <ion-row>
       <ion-col>
-        <div text-center (click)="select($event,'sweetness','more')">多糖</div>
+        <div text-center (click)="select($event,'sweetness','more')">{{ sweetDict['more'] }}</div>
       </ion-col>
       <ion-col>
-        <div text-center class="selected" (click)="select($event,'sweetness','regular')">正常</div>
+        <div text-center class="selected" (click)="select($event,'sweetness','regular')">{{ sweetDict['regular'] }}</div>
       </ion-col>
       <ion-col>
-        <div text-center (click)="select($event,'sweetness','half')">半塘</div>
+        <div text-center (click)="select($event,'sweetness','half')">{{ sweetDict['half'] }}</div>
       </ion-col>
       <ion-col>
-        <div text-center (click)="select($event,'sweetness','less')">微糖</div>
+        <div text-center (click)="select($event,'sweetness','less')">{{ sweetDict['less'] }}</div>
       </ion-col>
       <ion-col>
-        <div text-center (click)="select($event,'sweetness','none')">无糖</div>
+        <div text-center (click)="select($event,'sweetness','none')">{{ sweetDict['none'] }}</div>
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -44,6 +44,6 @@
       <i class="fa fa-jpy" aria-hidden="true"></i>
       <span>{{item.price}}</span>
     </div>
-    <i class="shopping-cart-add" aria-hidden="true" (click)="save()"></i>
+    <i class="shopping-cart-add" aria-hidden="true" (click)="save($event, item)"></i>
   </div>
 </div>

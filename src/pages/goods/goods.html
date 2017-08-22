@@ -5,8 +5,8 @@
     </button>
     <ion-title>{{tapItem}}</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only (click)="openCart()">
-        <i class="icon cart"></i>
+      <button ion-button icon-only (click)="openCart($event)">
+        <i id='cart' class="icon"></i>
       </button>
     </ion-buttons>
   </ion-navbar>

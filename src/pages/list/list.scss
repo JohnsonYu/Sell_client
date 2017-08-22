@@ -1,3 +1,24 @@
 page-list {
-
+  ion-item {
+    span {
+      font-weight: 900;
+      font-size: 1.8rem;
+    }
+    ion-icon {
+      font-size: 5rem;
+    }
+    .type {
+      width: 25vw;
+      float: left;
+    }
+    .price {
+      position: absolute;
+      right: 30vw;
+      bottom: 3vh;
+      span {
+        font-size: 4rem;
+        color: #8e9093;
+      }
+    }
+  }
 }
