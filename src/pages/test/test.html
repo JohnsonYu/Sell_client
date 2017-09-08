@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>test</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+   <button (click)="playnative($event)"> Play </button>
+</ion-content>
+
+<ion-footer>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only >
+        <ion-icon ios="ios-play" md="md-play"></ion-icon>
+      </button>
+    </ion-buttons>
+    <input />
+    <ion-buttons end>
+      <button ion-button icon-only (click)="pay($event)">
+        <ion-icon ios="md-add" md="md-add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-footer>

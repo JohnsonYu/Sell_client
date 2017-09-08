@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { NavController, NavParams } from 'ionic-angular'
+import { NavController, NavParams, ActionSheetController} from 'ionic-angular'
 import { RestProvider } from '../../providers/rest/rest'
 import { CartService } from '../../app/CartService'
 
@@ -17,6 +17,7 @@ export class ListPage {
       public rest: RestProvider,
       public navCtrl: NavController,
       public cartService: CartService, 
+      public actionSheetCtrl: ActionSheetController,
       public navParams: NavParams) {
     // If we navigateD to this page, we will have an item available as a nav param
     this.carts = navParams.get('carts')
@@ -40,6 +41,23 @@ export class ListPage {
   }
 
   pay(event){
-    console.log(this.carts)
+    let actionSheet = this.actionSheetCtrl.create({
+      title: '支付方式',
+      buttons: [{
+          text: '微信支付',
+          handler: () => {
+            this.rest.postOrders(this.carts).subscribe(res =>{
+              // TODO 微信支付
+            })
+          }
+        },{
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+          }
+        }
+      ]
+    });
+    actionSheet.present();
   }
 }

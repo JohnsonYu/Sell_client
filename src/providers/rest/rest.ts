@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core'
-import { Http, Response } from '@angular/http'
+import { Http, Response, Headers } from '@angular/http'
 import { Observable } from 'rxjs/Observable'
 import 'rxjs/add/operator/map'
 import 'rxjs/add/operator/catch'
+import 'rxjs/add/operator/toPromise';
 
 /*
   Generated class for the RestProvider provider.
@@ -16,6 +17,7 @@ export class RestProvider {
   private succulentUrl = "../assets/data/succulent.json"
   private teaUrl = "../assets/data/tea.json"
   private yogurtUrl = "../assets/data/yogurt.json"
+  private apiUrl = "http://localhost:8081/api/"
   private iceDict = {}
   private sweetDict = {}
 
@@ -31,6 +33,14 @@ export class RestProvider {
     this.sweetDict['none'] = '无糖'
     this.sweetDict['regular'] = '正常'
     this.sweetDict['half'] = '半糖'
+  }
+
+  postOrders(carts){
+      let headers = new Headers()
+      headers.append('Content-Type', 'application/json')
+      return this.http.post(this.apiUrl+'orders', JSON.stringify(carts), {headers: headers})
+        .map(this.extractData)
+        .catch(this.handleError)
   }
 
   getIceDict() {
